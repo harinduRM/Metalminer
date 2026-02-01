@@ -13,7 +13,7 @@ _One‑line tagline:_ Automated extraction of metal–ligand coordination enviro
 ## Key features
 
 - Searches CSD for target metals or processes a specific CSD ID list
-- Cleans coordination environments and extracts metal–ligand features
+- Cleans coordination environments (clean crystallographic disorder and add hydrogen when necessary) and extracts metal–ligand features
 - Computes oxidation state using multiple methods (metadata, LLM abstract, BVS)
 - Exports CSV/PKL results plus a run summary
 - CLI + Python API + optional Streamlit GUI
