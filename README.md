@@ -16,7 +16,9 @@ conda config --add channels https://conda.ccdc.cam.ac.uk
 conda install csd-python-api
 ```
 
-Note: a valid CCDC license is required for the API to function.
+Notes: 
+    (1) The CSD API requires an active CCDC license to operate. 
+    (2) If the API cannot detect the local CSD database, ensure that you are using the Conda environment provided with the CCDC Portfolio installation
 
 ## Using in Jupyter
 
