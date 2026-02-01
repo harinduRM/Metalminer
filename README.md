@@ -81,6 +81,13 @@ if __name__ == "__main__":
         SITE_TIMEOUT_SECONDS=240,  # optional
     )
 ```
+---
+
+## Documentation
+
+- CLI options & tags: `CLI_OPTIONS.md`
+
+---
 
 ### Realistic (CLI)
 
