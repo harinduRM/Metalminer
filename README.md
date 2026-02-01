@@ -1,3 +1,8 @@
+<p align="center">
+  <img src="logo.png" width="180">
+</p>
+
+
 # MetalMiner
 
 _One‑line tagline:_ Automated extraction of metal–ligand coordination environments and oxidation states from the Cambridge Structural Database (CSD).
