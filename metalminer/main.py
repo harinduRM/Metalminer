@@ -1,0 +1,56 @@
+"""Entry point for the MetalMiner project."""
+
+from .core import Config, Result, run_pipeline
+
+
+def main(
+    TARGET_METAL_list=["Pu"],
+    target_csd_ids=None,
+    EXTRACTION_METHOD="Topological",
+    R_FACTOR_LIMIT=10,
+    PROCESS_LIMIT=10000,
+    SITE_TIMEOUT_SECONDS=None,
+    RETRY_TIMEOUTS=True,
+    VISUALIZE=False,
+    VISUALIZATION_LIMIT=15,
+    FILTER_POLYMERIC=True,
+    FILTER_POWDER=True,
+    FILTER_ALL_DISORDER=False,
+    FILTER_PRIMARY_DISORDER=False,
+    CORRECT_PRIMARY_DISORDER=True,
+    Hydrogen_Addition_method="Geometric",
+    DISORDER_RESOLVE_METHOD="Hybrid",
+    num_metal_layers=1,
+    OXIDATION_STATES_FILTER=["all"],
+    GET_ABSTRACT=True,
+    Edit_manual=True,
+    Geometric_radius=3.8,
+    Extraction_Cut_off_distances={"LIMIT_NM_NM": 2.8, "LIMIT_M_NM": 3.5, "LIMIT_H_X": 1.3},
+    metalloligands=["Cr", "V", "Mo", "W", "S", "Co"],
+) -> Result:
+    config = Config(
+        TARGET_METAL_list=TARGET_METAL_list,
+        target_csd_ids=target_csd_ids,
+        EXTRACTION_METHOD=EXTRACTION_METHOD,
+        R_FACTOR_LIMIT=R_FACTOR_LIMIT,
+        PROCESS_LIMIT=PROCESS_LIMIT,
+        SITE_TIMEOUT_SECONDS=SITE_TIMEOUT_SECONDS,
+        RETRY_TIMEOUTS=RETRY_TIMEOUTS,
+        VISUALIZE=VISUALIZE,
+        VISUALIZATION_LIMIT=VISUALIZATION_LIMIT,
+        FILTER_POLYMERIC=FILTER_POLYMERIC,
+        FILTER_POWDER=FILTER_POWDER,
+        FILTER_ALL_DISORDER=FILTER_ALL_DISORDER,
+        FILTER_PRIMARY_DISORDER=FILTER_PRIMARY_DISORDER,
+        CORRECT_PRIMARY_DISORDER=CORRECT_PRIMARY_DISORDER,
+        Hydrogen_Addition_method=Hydrogen_Addition_method,
+        DISORDER_RESOLVE_METHOD=DISORDER_RESOLVE_METHOD,
+        num_metal_layers=num_metal_layers,
+        OXIDATION_STATES_FILTER=OXIDATION_STATES_FILTER,
+        GET_ABSTRACT=GET_ABSTRACT,
+        Edit_manual=Edit_manual,
+        Geometric_radius=Geometric_radius,
+        Extraction_Cut_off_distances=Extraction_Cut_off_distances,
+        metalloligands=metalloligands,
+    )
+    return run_pipeline(config)
