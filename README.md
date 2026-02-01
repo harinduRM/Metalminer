@@ -101,9 +101,9 @@ The CSV columns include (see `RESULT_COLUMNS` in `metalminer/core.py`):
 
 ```
 CSD ID, Site Label, Metal, Oxidation State, Chemical Name, Unit_cell,
-Abstract, Structure Type, Coordination Number, Ligand_count, AN_n_Ligand_Info,
+Abstract, Structure Type, Coordination Number, Ligand_count, Ligand_Info,
 VALIDATION_FAILED, HAD_RDKIT_ISSUE, Bridging_Ligand, Total_Ligand_Charge,
-OS_Method, Hydrogen Method, OS_source, AN_n_XYZ Coordinates,
+OS_Method, Hydrogen Method, OS_source, XYZ Coordinates,
 Had_prismary_sphere_disorder, DOI
 ```
 
