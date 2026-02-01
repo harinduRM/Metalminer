@@ -100,8 +100,6 @@ python -m metalminer.cli \
 
 ---
 
----
-
 ## Output format
 
 MetalMiner writes:
