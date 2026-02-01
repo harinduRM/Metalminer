@@ -5,21 +5,9 @@ _One‑line tagline:_ Automated extraction of metal–ligand coordination enviro
 ![CI not configured](https://img.shields.io/badge/CI-not_configured-lightgrey)
 ![license MIT](https://img.shields.io/badge/license-MIT-green)
 ![python 3.11.14](https://img.shields.io/badge/python-3.11.14-blue)
-![black not configured](https://img.shields.io/badge/black-not_configured-lightgrey)
-![ruff not configured](https://img.shields.io/badge/ruff-not_configured-lightgrey)
-![docs not available](https://img.shields.io/badge/docs-not_available-lightgrey)
 
 > **CCDC license required:** MetalMiner uses the CCDC CSD Python API. You must have a valid CCDC license and install `csd-python-api` from the CCDC conda channel for the pipeline to run.
 
----
-
-## Demo (GIF / screenshot)
-
-Add a short demo image here (replace `docs/demo.gif` with your own):
-
-![MetalMiner demo](docs/demo.gif)
-
----
 
 ## Key features
 
