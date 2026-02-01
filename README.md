@@ -81,13 +81,6 @@ if __name__ == "__main__":
         SITE_TIMEOUT_SECONDS=240,  # optional
     )
 ```
----
-
-## Documentation
-
-- CLI options & tags: `CLI_OPTIONS.md`
-
----
 
 ### Realistic (CLI)
 
@@ -98,6 +91,14 @@ python -m metalminer.cli \
   --oxidation-states-filter all \
   --visualize
 ```
+
+---
+
+## Documentation
+
+- CLI options & tags: `CLI_OPTIONS.md`
+
+---
 
 ---
 
