@@ -1,5 +1,3 @@
-"""Convenience entry point for running MetalMiner as a script."""
-
 from metalminer.main import main
 
 
