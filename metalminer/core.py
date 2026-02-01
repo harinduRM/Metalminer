@@ -1256,7 +1256,7 @@ def run_pipeline(
                     "Structure Type": structure_type,
                     "Coordination Number": coordination_number,
                     "Ligand_count": lig_count,
-                    "AN_n_Ligand_Info": AN_n_ligand_data,
+                    "Ligand_Info": AN_n_ligand_data,
                     "VALIDATION_FAILED": validation_failed,
                     "HAD_RDKIT_ISSUE": has_rdkit_issue,
                     "Bridging_Ligand": has_bridging,
@@ -1264,7 +1264,7 @@ def run_pipeline(
                     "OS_Method": method_used,
                     "Hydrogen Method": config.Hydrogen_Addition_method,
                     "OS_source": source,
-                    "AN_n_XYZ Coordinates": AN_n_xyz_block,
+                    "XYZ Coordinates": AN_n_xyz_block,
                     "Had_prismary_sphere_disorder": has_primary_disorder,
                     "DOI": doi_str,
                 }
