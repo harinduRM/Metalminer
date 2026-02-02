@@ -24,21 +24,9 @@ _One‑line tagline:_ Automated extraction of metal–ligand coordination enviro
 - CLI + Python API + optional Streamlit GUI
 
 ---
-
-## Installation
-
-### Prerequisites
-
-- Conda (Miniconda or Anaconda recommended)
-- Python 3.10–3.11 (tested with Python 3.11.14)
-- Valid CCDC license (required for CSD Python API)
-- Installed CCDC Portfolio (for local CSD database access)
-
----
-
 ## Recommended Installation (Conda + pip)
 
-This workflow installs all scientific dependencies using Conda and installs MetalMiner using pip in editable mode.
+This workflow installs all scientific dependencies using Conda and installs MetalMiner using pip in editable mode.  
 **Tested with:** Python 3.11.14, NumPy 1.26.4, Pandas 2.2.3, SciPy 1.13.1, RDKit 2025.09.2, Streamlit 1.52.2.
 
 ```bash
@@ -62,6 +50,52 @@ pip install google-generativeai==0.8.5
 
 # 6) Install MetalMiner (editable mode)
 pip install -e .
+```
+
+---
+
+## Windows: CSD Database Detection Issue (CCDC API)
+
+On some Windows systems, the CSD Python API may install successfully but fail to detect the local CSD database. This typically results in errors indicating that the database path cannot be found.
+
+### Recommended Solution (Windows Users)
+
+If this occurs, use the **Conda environment bundled with the CCDC Portfolio installation**, which is preconfigured with:
+
+- Python and CSD Python API  
+- Correct local CSD database paths  
+- Active CCDC license integration  
+
+---
+
+### Workflow Using the CCDC Portfolio Conda Environment (Windows)
+
+1. Open the **CCDC Portfolio Conda Prompt** (installed with the CCDC software).
+
+2. Install remaining dependencies:
+
+```bash
+conda install numpy pandas scipy rdkit streamlit py3Dmol requests
+pip install google-generativeai==0.8.5
+```
+
+3. Navigate to the MetalMiner repository and install MetalMiner:
+
+```bash
+cd path\to\Metalminer
+pip install -e .
+```
+
+This approach avoids manual database path configuration and ensures reliable access to the locally installed CSD on Windows.
+
+---
+
+## Verification
+
+Verify that MetalMiner is correctly installed:
+
+```bash
+python -c "import metalminer; print('MetalMiner successfully installed')"
 ```
 ---
 
