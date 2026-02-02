@@ -46,7 +46,7 @@ git clone https://github.com/harinduRM/Metalminer.git
 cd Metalminer
 
 # 2) Create and activate a Conda environment
-conda create -n metalminer python=3.11
+conda create -n metalminer python=3.11.14
 conda activate metalminer
 
 # 3) Install the CCDC CSD Python API
@@ -54,14 +54,15 @@ conda config --add channels https://conda.ccdc.cam.ac.uk
 conda install csd-python-api
 
 # 4) Install remaining dependencies using Conda
-conda install numpy pandas scipy rdkit tqdm pyyaml
+conda install numpy pandas scipy rdkit streamlit py3Dmol requests
 
 # 5) Install Google Generative AI dependency (pip only)
-pip install google-generativeai
+pip install google-generativeai==0.8.5
 
 # 6) Install MetalMiner (editable mode)
 pip install -e .
 ```
+Tested with Python 3.11.14, NumPy 1.26.4, Pandas 2.2.3, SciPy 1.13.1, RDKit 2025.09.2, Streamlit 1.52.2.
 ---
 
 ## Example usage
