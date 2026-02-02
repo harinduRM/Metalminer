@@ -139,8 +139,7 @@ from metalminer.core import Config, run_pipeline
 config = Config(TARGET_METAL_list=["Pu"], VISUALIZE=True)
 result = run_pipeline(config)
 ```
-
-## 3) GUI (Streamlit)
+### 3) GUI (Streamlit)
 
 The GUI mirrors the CLI options and streams console output during execution.
 
@@ -148,7 +147,6 @@ The GUI mirrors the CLI options and streams console output during execution.
 pip install -e .
 streamlit run app/app.py
 ```
-
 ---
 
 ## Documentation
