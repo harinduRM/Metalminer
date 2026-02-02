@@ -25,19 +25,42 @@ _One‑line tagline:_ Automated extraction of metal–ligand coordination enviro
 
 ---
 
-## Quickstart
+## Installation
+
+### Prerequisites
+
+- Conda (Miniconda or Anaconda recommended)
+- Python 3.10–3.11 (tested with Python 3.11.14)
+- Valid CCDC license (required for CSD Python API)
+- Installed CCDC Portfolio (for local CSD database access)
+
+---
+
+## Recommended Installation Workflow (Conda + pip)
+
+This workflow installs all scientific dependencies using Conda and installs MetalMiner using pip in editable mode.
 
 ```bash
-# 1) Create/activate a conda env (recommended) and install the CCDC API
+# 1) Clone the MetalMiner repository
+git clone https://github.com/harinduRM/Metalminer.git
+cd Metalminer
+
+# 2) Create and activate a Conda environment
+conda create -n metalminer python=3.11
+conda activate metalminer
+
+# 3) Install the CCDC CSD Python API
 conda config --add channels https://conda.ccdc.cam.ac.uk
 conda install csd-python-api
 
-# 2) Install MetalMiner (editable)
-pip install -e .
+# 4) Install remaining dependencies using Conda
+conda install numpy pandas scipy rdkit tqdm pyyaml
 
-# 3) Run the CLI
-python -m metalminer.cli --target-metals Pu --visualize --process-limit 100
-```
+# 5) Install Google Generative AI dependency (pip only)
+pip install google-generativeai
+
+# 6) Install MetalMiner (editable mode)
+pip install -e .
 
 ---
 
