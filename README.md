@@ -61,7 +61,7 @@ pip install google-generativeai
 
 # 6) Install MetalMiner (editable mode)
 pip install -e .
-
+```
 ---
 
 ## Example usage
