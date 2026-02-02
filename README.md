@@ -200,37 +200,6 @@ CSV + PKL + run_summary.txt
 
 ---
 
-## Installation options
-
-### Conda (recommended)
-
-```bash
-conda config --add channels https://conda.ccdc.cam.ac.uk
-conda install csd-python-api
-pip install -e .
-```
-
-### pip (no CSD API)
-
-```bash
-pip install -e .
-```
-
-> Note: Without the CCDC `csd-python-api`, the pipeline cannot access CSD entries.
-
----
-
-## GUI (Streamlit)
-
-The GUI mirrors the CLI options and streams console output during execution.
-
-```bash
-pip install -e .
-streamlit run app/app.py
-```
-
----
-
 ## Project structure
 
 ```
