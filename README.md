@@ -237,7 +237,6 @@ streamlit run app/app.py
 ```
 Modulized_V9/
 ├─ app/                 # Streamlit GUI
-├─ conda/               # Conda recipe
 ├─ metalminer/          # Core library
 ├─ scripts/             # Utility scripts
 ├─ main.py              # Entry point
