@@ -12,6 +12,7 @@ _One‑line tagline:_ Automated extraction of metal–ligand coordination enviro
 ![python 3.11.14](https://img.shields.io/badge/python-3.11.14-blue)
 
 > **CCDC license required:** MetalMiner uses the CCDC CSD Python API. You must have a valid CCDC license and install `csd-python-api` from the CCDC conda channel for the pipeline to run.
+> **Google Gemini API Key is recommended:** Goolge Gemini API key will be needed for the LLM base oxidation state extraction
 
 ---
 
@@ -99,18 +100,9 @@ python -c "import metalminer; print('MetalMiner successfully installed')"
 ```
 ---
 
-## Example usage
+## Example usage options
 
-### Minimal (Python API)
-
-```python
-from metalminer.core import Config, run_pipeline
-
-config = Config(TARGET_METAL_list=["Pu"], VISUALIZE=True)
-result = run_pipeline(config)
-```
-
-### Typical run (Python entry point)
+### 1) Through python file or within Jypiter notebook
 
 ```python
 from metalminer.main import main as run_metalminer
@@ -139,15 +131,22 @@ if __name__ == "__main__":
         SITE_TIMEOUT_SECONDS=240,  # optional
     )
 ```
+### 2) CLI (python terminal)
 
-### Realistic (CLI)
+```python
+from metalminer.core import Config, run_pipeline
+
+config = Config(TARGET_METAL_list=["Pu"], VISUALIZE=True)
+result = run_pipeline(config)
+```
+
+## 3) GUI (Streamlit)
+
+The GUI mirrors the CLI options and streams console output during execution.
 
 ```bash
-python -m metalminer.cli \
-  --target-metals Pu Th Ce \
-  --process-limit 500 \
-  --oxidation-states-filter all \
-  --visualize
+pip install -e .
+streamlit run app/app.py
 ```
 
 ---
