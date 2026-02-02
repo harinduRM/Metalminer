@@ -39,7 +39,7 @@ _One‑line tagline:_ Automated extraction of metal–ligand coordination enviro
 ## Recommended Installation (Conda + pip)
 
 This workflow installs all scientific dependencies using Conda and installs MetalMiner using pip in editable mode.
-Tested with Python 3.11.14, NumPy 1.26.4, Pandas 2.2.3, SciPy 1.13.1, RDKit 2025.09.2, Streamlit 1.52.2.
+**Tested with:** Python 3.11.14, NumPy 1.26.4, Pandas 2.2.3, SciPy 1.13.1, RDKit 2025.09.2, Streamlit 1.52.2.
 
 ```bash
 # 1) Clone the MetalMiner repository
