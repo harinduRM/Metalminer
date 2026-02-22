@@ -595,11 +595,6 @@ def process_structure_core(entry, target_element, target_atom_label, num_metal_l
                         selected_indices.add(n.index)
                         index_to_layer[n.index] = index_to_layer.get(curr_idx, 1)
                         bfs_queue.append(n.index)
-
-        pass 
-        # (Assuming you don't use this mode primarily, but if needed I can paste the block)
-        # Placeholder for brevity - revert to previous Geometric block if needed.
-        # But for 'Topological' which is default:
     else:
         # === TOPOLOGICAL ===
         queue = [(start_metal, 1)]
