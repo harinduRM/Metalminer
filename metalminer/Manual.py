@@ -72,7 +72,6 @@ def visualize_manual_disorder(mol, target_metal_label):
         color = 'white' if occ >= 0.99 else 'red'
         view.addStyle({'model': -1, 'serial': i}, {'sphere': {'color': color, 'scale': 0.2}}, viewer=(0,1))
         
-        # FIX: Only show labels for atoms with occupancy < 1 in BOTH images
         if occ < 0.99:
             pos = {'x': atom.coordinates.x, 'y': atom.coordinates.y, 'z': atom.coordinates.z}
             label_text = f"{atom.index}: ({occ:.1f})"
