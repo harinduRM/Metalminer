@@ -596,7 +596,6 @@ def process_structure_core(entry, target_element, target_atom_label, num_metal_l
                         index_to_layer[n.index] = index_to_layer.get(curr_idx, 1)
                         bfs_queue.append(n.index)
 
-        # ... (Same Geometric Logic as before)
         pass 
         # (Assuming you don't use this mode primarily, but if needed I can paste the block)
         # Placeholder for brevity - revert to previous Geometric block if needed.
@@ -677,7 +676,6 @@ def process_structure_core(entry, target_element, target_atom_label, num_metal_l
         layer = index_to_layer.get(idx, 1)
         atom_to_layer_map[new_atom] = layer
         
-    # --- NEW BLOCK: DETECT PARENT BRIDGING ---
     # We check the ORIGINAL connectivity in 'all_atoms' (the packed cell)
     # If an atom was connected to >1 metal in the original crystal, it IS bridging,
     # even if we stripped the other metals in the extraction.
@@ -742,8 +740,6 @@ def process_structure_core(entry, target_element, target_atom_label, num_metal_l
                     
                     # Update leader's position (this is allowed)
                     leader.coordinates = molecule.Coordinates(avg_x, avg_y, avg_z)
-                    
-                    # REMOVED: leader.occupancy = ... (This caused the AttributeError)
                     
                     # Mark all other atoms in the group for removal
                     all_atoms_to_remove.extend(followers)
