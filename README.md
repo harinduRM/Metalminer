@@ -214,7 +214,8 @@ Modulized_V9/
 
 ## Citation
 
-If you use MetalMiner in academic work, please cite this repository (update when you have a paper):
+
+If you use MetalMiner in academic work, please cite both the software repository and the associated ChemRxiv preprint:
 
 ```bibtex
 @software{metalminer,
@@ -222,6 +223,15 @@ If you use MetalMiner in academic work, please cite this repository (update when
   author       = {Rajapaksha, Harindu},
   year         = {2026},
   url          = {https://github.com/harinduRM/Metalminer}
+}
+
+@misc{rajapaksha_metalminer_preprint_2026,
+  title        = {MetalMiner},
+  author       = {Rajapaksha, Harindu and Mason, Sara E. and Forbes, Tori Z.},
+  year         = {2026},
+  publisher    = {ChemRxiv},
+  doi          = {10.26434/chemrxiv.15002944/v1},
+  url          = {https://doi.org/10.26434/chemrxiv.15002944/v1}
 }
 ```
 
